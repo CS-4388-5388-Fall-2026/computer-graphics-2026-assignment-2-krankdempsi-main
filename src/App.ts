@@ -149,6 +149,15 @@ export class App extends gfx.GfxApp
         
         // ADD YOUR CODE
 
+                this.hole.position.x = Math.min(
+            Math.max(this.hole.position.x, this.playArea.min.x + this.holeRadius),
+            this.playArea.max.x - this.holeRadius
+        );
+        this.hole.position.z = Math.min(
+            Math.max(this.hole.position.z, this.playArea.min.x + this.holeRadius),
+            this.playArea.max.z - this.holeRadius
+        );
+
 
 
         // Update rigid body physics
